@@ -1,0 +1,40 @@
+{
+    "name": "szabacsik/catalog",
+    "description": "Catalog",
+    "type": "library",
+    "require": {
+        "php": "^7.2 || ^8.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "*",
+        "squizlabs/php_codesniffer": "*",
+        "vimeo/psalm": "*",
+        "phpstan/phpstan": "*"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "András Szabácsik",
+            "homepage": "https://github.com/szabacsik/"
+        }
+    ],
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "autoload": {
+        "psr-4": {
+            "Szabacsik\\Catalog\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Szabacsik\\Catalog\\Test\\": "tests"
+        }
+    },
+    "scripts": {
+        "phpunit": "phpunit --verbose --colors=always",
+        "phpunit-coverage": "phpunit --verbose --colors=always --coverage-html build/coverage",
+        "test": [
+            "@phpunit"
+        ]
+    }
+}
