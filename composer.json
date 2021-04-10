@@ -35,6 +35,17 @@
         "phpunit-coverage": "phpunit --verbose --colors=always --coverage-html build/coverage",
         "test": [
             "@phpunit"
+        ],
+        "codesniffer": [
+            "phpcs --standard=PSR12 src",
+            "phpcs --standard=PSR12 tests"
+        ],
+        "phpstan": [
+            "phpstan analyse --level 8 src",
+            "phpstan analyse --level 8 tests"
+        ],
+        "psalm": [
+            "psalm --show-info=true"
         ]
     }
 }
